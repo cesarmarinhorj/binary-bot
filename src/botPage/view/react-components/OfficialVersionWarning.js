@@ -6,12 +6,7 @@ import * as style from '../style';
 const OfficialVersionWarning = ({ show }) =>
     show ? (
         <div style={style.bottomWarning}>
-            <div id="end-note">
-                {`${translate('This is not an official version of Binary Bot, use at your own risk.')} `}
-                <a style={style.bottomWarningLink} href="https://bot.binary.com/bot.html">
-                    {translate('Official Version')}
-                </a>
-            </div>
+            <div id="end-note">Desenvolvido por Mbmaciel.com</div>
         </div>
     ) : null;
 
