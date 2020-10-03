@@ -1,5 +1,13 @@
 <xml id="toolbox" style="display: none">
-    <category name="Logic" i18n-text="Logic">
+    <category name="Ajuda" i18n-text="Ajuda">
+       <block type="text">
+             <value name="TEXT">
+                <shadow type="text">
+                    <field name="TEXT">teste de texto</field>
+                </shadow>
+            </value>
+       </block>
+    <!--
         <block type="controls_if"></block>
         <block type="logic_compare"></block>
         <block type="logic_operation"></block>
@@ -7,7 +15,12 @@
         <block type="logic_boolean"></block>
         <block type="logic_null"></block>
         <block type="logic_ternary"></block>
+        -->
     </category>
+    <category name="Videos" i18n-text="Videos">
+
+    </category>
+    <!--
     <category name="Math" i18n-text="Math">
         <block type="math_number">
             <field name="NUM">1</field>
@@ -244,6 +257,7 @@
             <block type="controls_flow_statements"></block>
         </category>
     </category>
+    
     <category name="Binary" i18n-text="Binary">
         <category name="Trade Definition" i18n-text="Trade Definition">
             <block type="trade"></block>
@@ -497,4 +511,5 @@
             </category>
         </category>
     </category>
+    -->
 </xml>
