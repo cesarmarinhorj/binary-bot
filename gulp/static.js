@@ -37,7 +37,8 @@ gulp.task(
 
 gulp.task(
     'copy-binary-style-css',
-    gulp.series(() => gulp.src('node_modules/binary-style/binary.css').pipe(gulp.dest('www/css')))
+    // gulp.series(() => gulp.src('node_modules/binary-style/binary.css').pipe(gulp.dest('www/css')))
+    gulp.series(() => gulp.src('static/binary-style/binary.css').pipe(gulp.dest('www/css')))
 );
 
 gulp.task(
