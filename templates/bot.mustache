@@ -3,7 +3,7 @@
 
 <head>
     {{> ../templates/partials/security }} {{> ../templates/partials/head }}
-    <title>Binary Bot</title>
+    <title>OneBot</title>
     {{> bundle_css }}
     <link rel="stylesheet" href="css/binary.css">
     {{> bot_css }}
@@ -49,7 +49,7 @@
             {{> ../templates/partials/language }}
         </div>
         <div id="server-status" class="right-header"></div>
-        <a id="contact-us" class="right-header" target="_blank" href="https://www.binary.com/en/contact.html"
+        <a id="contact-us" class="right-header" target="_blank" href="#"
             data-i18n-text="Contact us"></a>
         <div id="server-time" class="right-header"></div>
     </div>
@@ -57,10 +57,10 @@
     <div id="header" style="display: none;">
         <div class="left-header">
             <div class="logo-wrapper">
-                <a href="https://www.binary.com" target="blank" id="logo">
+                <a href="." id="logo">
                     <div class="logo-parent">
                         <div class="logo">
-                            <img class="responsive" src="{{> binary_style_img }}/logo/symbol.svg" alt="Binary logo" />
+                            <img class="responsive" src="{{> binary_style_img }}/logo/symbol.svg" alt="OneBot" />
                         </div>
                         <div class="binary-logo-text">
                             <img class="responsive" src="" alt="">
@@ -112,8 +112,8 @@
     </div>
     <div id="toolbox" class="actions_menu show-on-load">
         <button data-i18n-title="Reset the blocks to their initial state" id="resetButton" class="toolbox-button icon-reset"></button>
-        <button data-i18n-title="Load new blocks (xml file)" id="load-xml" class="toolbox-button icon-browse"></button>
-        <button data-i18n-title="Save the existing blocks (xml file)" id="save-xml" class="toolbox-button icon-save"></button>
+        <!-- <button data-i18n-title="Load new blocks (xml file)" id="load-xml" class="toolbox-button icon-browse"></button>
+        <button data-i18n-title="Save the existing blocks (xml file)" id="save-xml" class="toolbox-button icon-save"></button> --->
         <button data-i18n-title="Connect Binary Bot to your Google Drive to easily save and re-use your blocks" id="integrations" class="toolbox-button icon-integrations invisible"></button>
 
         <span class="toolbox-separator"></span>
@@ -121,9 +121,7 @@
         <button data-i18n-title="Redo the changes (Ctrl+Shift+Z)" id="redo" class="toolbox-button icon-redo"></button>
 
         <span class="toolbox-separator"></span>
-        <button data-i18n-title="Zoom In (Ctrl + +)" id="zoomIn" class="toolbox-button icon-zoom-in"></button>
-        <button data-i18n-title="Zoom Out (Ctrl + -)" id="zoomOut" class="toolbox-button icon-zoom-out"></button>
-        <button data-i18n-title="Rearrange Vertically" id="rearrange" class="toolbox-button icon-sort"></button>
+        <button data-i18n-title="Carregar Bots" id="load-bot" class="toolbox-button icon-browse"></button>
 
         <span class="toolbox-separator"></span>
         <button data-i18n-title="Show/hide the summary pop-up" id="showSummary" class="toolbox-button icon-summary"></button>
@@ -178,8 +176,7 @@
     <audio id="error" src="sound/out-of-bounds.ogg" autostart="false"></audio>
     <audio id="severe-error" src="sound/i-am-being-serious.ogg" autostart="false"></audio>
     {{> bundle}} {{> bot}}
-    {{> elevio_script }}
-    {{> gtm_iframe }}
+    
     <div class="notifyjs-corner" style="bottom: 0px; right: 0px;"></div>
     <div class="notifyjs-corner" style="bottom: 0px; left: 0px;"></div>
 </body>
