@@ -6,6 +6,7 @@ import Chart from './Dialogs/Chart';
 import Limits from './Dialogs/Limits';
 import IntegrationsDialog from './Dialogs/IntegrationsDialog';
 import LoadDialog from './Dialogs/LoadDialog';
+import BotDialog from './Dialogs/BotDialog';
 import SaveDialog from './Dialogs/SaveDialog';
 import TradingView from './Dialogs/TradingView';
 import logHandler from './logger';
@@ -147,6 +148,7 @@ const clearRealityCheck = () => {
 
 const integrationsDialog = new IntegrationsDialog();
 const loadDialog = new LoadDialog();
+const botDialog = new BotDialog();
 const saveDialog = new SaveDialog();
 
 const getLandingCompanyForToken = id => {
@@ -404,6 +406,8 @@ export default class View {
         $('#integrations').click(() => integrationsDialog.open());
 
         $('#load-xml').click(() => loadDialog.open());
+
+        $('#load-bot').click(() => botDialog.open());
 
         $('#save-xml').click(() => saveDialog.save().then(arg => this.blockly.save(arg)));
 
@@ -737,7 +741,7 @@ function initRealityCheck(stopCallback) {
 }
 function renderReactComponents() {
     ReactDOM.render(<ServerTime api={api} />, $('#server-time')[0]);
-    ReactDOM.render(<Tour />, $('#tour')[0]);
+    // ReactDOM.render(<Tour />, $('#tour')[0]); // tour retirado. mbmaciel
     ReactDOM.render(
         <OfficialVersionWarning
             show={
