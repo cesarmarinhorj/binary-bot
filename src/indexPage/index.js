@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import endpoint from './endpoint';
+import login from './login';
 import Logo from './react-components/logo.jsx';
 import Footer from './react-components/footer.jsx';
 import { oauthLogin } from '../common/appId';
@@ -33,4 +34,5 @@ const loginCheck = () => {
     }
 };
 
+login();
 loginCheck();

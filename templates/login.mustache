@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    {{> ../templates/partials/security }} {{> ../templates/partials/head }}
+    <title>OneBot</title>
+    {{> bundle_css }}
+    <link rel="stylesheet" href="css/binary.css">
+    {{> bot_css }}
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="left-header">
+        <div class="logo-wrapper">
+          <a href="https://www.onebotmembers.com" target="blank" id="logo">
+            <div class="logo-parent">
+              <div class="logo">
+                <img class="responsive" src="{{> binary_style_img }}/logo/symbol.svg" alt="Onebot" />
+              </div>
+              <div class="binary-logo-text">
+                <img class="responsive" src="{{> binary_style_img }}/logo/type.svg" alt="OneBot">
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="content-holder">
+        <div class="container">
+            <h1>Faça aqui o login no sistema:</h1>
+            <div style="border: 1px solid #bababa; padding: 1em;border-radius: 0.5em;">
+                <form>
+                    <table id="details" style="width: 100%;">
+                        <tr><td style="text-align: right"><b>Email</b></td><td><input type="text" id="loginUser" value="" maxlength=30 /></td></tr>
+                        <tr><td style="text-align: right"><b>Senha</b></td><td><input type="text" id="passwordUser" value="1" maxlength=5 /><p class="hint no-margin"></td></tr>
+                        <tr><td style="text-align: right"><button class="button" id="submitUser" type="submit">Enviar</button></td></tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{> index}}
+  <style>
+    #details td {
+     border: none; 
+    }
+  </style>
+  </body>
+</html>
