@@ -15,14 +15,14 @@ export default function login() {
     $(document).ready(() => {
         $('#submitUser').click(validate);
 
-        init();
+        // init();
     });
     return true;
 }
 
 function validate() {
-    const loginUser = $('#loginUser').val();
-    const passwordUser = $('#passwordUser').val();
+    const loginUser = $('#loginUser').value;
+    const passwordUser = $('#passwordUser').value;
 
     // this.setState({ validating: true });
 
@@ -32,17 +32,19 @@ function validate() {
     formData.append('password', passwordUser);
 
     const fetchOption = {
-        method : 'POST',
-        mode   : 'cors',
-        headers: { 'Content-Type': 'application/json' },
-        body   : formData,
-    };
+            method: 'POST',
+            // mode   : 'cors',
+            // headers: { 'Content-Type': 'application/json' },
+            body  : formData,
+        },
+        url = 'https://perfil.mbmaciel.com/authentication.php';
+    console.log(url);
 
-    return fetch('http://perfil.mbmaciel.com/authentication.php', fetchOption)
+    return fetch(url, fetchOption)
         .then(response => response.json())
         .then(responseJson => {
             const data = responseJson.data;
-            console.log(`data: ${  data}`);
+            console.log(`data: ${data}`);
 
             if (this.saveToStorage(data)) {
                 this.setState({

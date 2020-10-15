@@ -13,8 +13,8 @@ import { createUrl } from '../common/utils/tools';
 import '../common/binary-ui/dropdown';
 
 const renderElements = () => {
-    ReactDOM.render(<Logo />, document.getElementById('binary-logo'));
-    ReactDOM.render(<Footer />, document.getElementById('footer'));
+    // ReactDOM.render(<Logo />, document.getElementById('binary-logo'));
+    // ReactDOM.render(<Footer />, document.getElementById('footer'));
     isEuCountry().then(isEu => showHideEuElements(isEu));
     $('#shop-url').attr('href', createUrl({ subdomain: 'shop', path: 'collections/strategies', isNonBotPage: true }));
 };
