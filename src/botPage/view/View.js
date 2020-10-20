@@ -753,3 +753,16 @@ function renderReactComponents() {
     ReactDOM.render(<TradeInfoPanel api={api} />, $('#summaryPanel')[0]);
     ReactDOM.render(<LogTable />, $('#logTable')[0]);
 }
+
+$(document).ready(() => {
+    window.isLoggedIn = false;
+    if (window.localStorage.config) {
+        const config = JSON.parse(window.localStorage.config);
+        if (config.auth_token.length) {
+            window.isLoggedIn = true;
+        }
+    }
+    if (!isLoggedIn) {
+        window.location.href = '/login.html';
+    }
+});
