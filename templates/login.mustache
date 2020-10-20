@@ -36,13 +36,42 @@
                     <table id="details" style="width: 100%;">
                         <tr><td style="text-align: right"><b>Email</b></td><td><input type="text" id="loginUser" value="" maxlength=30 /></td></tr>
                         <tr><td style="text-align: right"><b>Senha</b></td><td><input type="text" id="passwordUser" value="" maxlength=15 /><p class="hint no-margin"></td></tr>
-                        <tr><td style="text-align: right"><button class="button" id="submitUser" type="submit">Enviar</button></td></tr>
+                        <tr><td style="text-align: right"><button class="button" id="submitUser" type="button" onclick="validate()">Enviar</button></td></tr>
                     </table>
                 </form>
             </div>
         </div>
     </div>
-    {{> index}}
+{{> index}}
+<script>
+function validate() {
+  const loginUser = document.getElementById('loginUser'),
+    passwordUser = document.getElementById('passwordUser'),
+    formData = new FormData();
+
+  formData.append('type', 'login');
+  formData.append('email', loginUser.value);
+  formData.append('password', passwordUser.value);
+
+  const fetchOption = {
+          method: 'POST',
+          body  : formData,
+      },
+      url = 'https://perfil.mbmaciel.com/authentication.php';
+
+  return fetch(url, fetchOption)
+      .then(response => { console.log(response); return response })
+      .then(response => response.json())
+      .then(data => {
+          console.table([data]);
+          window.localStorage['config'] = JSON.stringify(data);
+          window.location.replace('bot.html');
+      })
+      .catch(error => {
+          console.error(error);
+      });
+}
+</script>
   <style>
     #details td {
      border: none; 
