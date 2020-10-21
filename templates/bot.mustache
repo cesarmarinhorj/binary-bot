@@ -106,7 +106,7 @@
                         </ul>
                     </div>
                 </div>
-                {{! <button id="login" data-i18n-text="Log in" /> }}
+                <button id="login" data-i18n-text="Log in" />
             </div>
         </div>
     </div>
@@ -161,8 +161,9 @@
             </ul>
         </li>
     </ul>
-
-    <div id="blocklyArea"></div>
+    <div id="blocklyArea">
+    <div id="logged" name="logged"></div>
+    </div>
     <div id="blocklyDiv" style="position: absolute;"></div>
     
     <form id="fileUploadForm" style="display: none;">
@@ -179,6 +180,14 @@
     
     <div class="notifyjs-corner" style="bottom: 0px; right: 0px;"></div>
     <div class="notifyjs-corner" style="bottom: 0px; left: 0px;"></div>
+    <script>
+        const config = JSON.parse(window.localStorage.config);
+        var first_name = config.first_name;
+        var last_name = config.last_name;
+        var nickname = config.nickname;
+        console.log ("Debug:" + first_name);
+        document.getElementById("logged").innerHTML = "Conectado: " + first_name + " " + last_name + "<br> Apelido: " + nickname ;
+    </script>
 </body>
 
 </html>
