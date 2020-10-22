@@ -218,3 +218,26 @@ label {
 .notifyjs-corner {
     z-index: 10001 !important;
 }
+
+#loggedContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    justify-content: space-between;
+    background-color: #eee;
+    height: 100%;
+}
+
+#logged {
+    border-right: 4px solid #E98024;
+    border-top: 4px solid #fff;    
+    flex-wrap: nowrap;
+    float: left;
+    min-width: 160px;
+}
+
+#loggedImg{
+    margin-left: 6px;
+    float: right;
+}

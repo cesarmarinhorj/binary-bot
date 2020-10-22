@@ -162,8 +162,12 @@
         </li>
     </ul>
     <div id="blocklyArea">
-    <div id="logged" name="logged"></div>
-    <img src="/image/tradingview.png" width="100%" />
+        <div id="loggedContainer">
+            <div id="logged" name="logged"></div>
+            <div id="loggedImg">
+                <img src="/image/tradingview.png" width="100%" />
+            </div>
+        </div>
     </div>
     <div id="blocklyDiv" style="position: absolute;"></div>
     
@@ -191,9 +195,9 @@ const config = JSON.parse(window.localStorage.config),
     first_name = config.first_name,
     last_name = config.last_name,
     nickname = config.nickname,
-    mensagem = "Conectado: " + first_name + " " + last_name + ", " +
-        "Apelido: " + nickname +
-        " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#' onclick='logout()'>Logout</a>";
+    mensagem = "<strong>Conectado:</strong><br>" + first_name + " " + last_name + "<br><br>" +
+        "<strong>Apelido:</strong><br>" + nickname + "<br>" +
+        "<br><br><br><a href='#' onclick='logout()'>Logout</a>";
 
 document.getElementById("logged").innerHTML = mensagem;
 </script>
