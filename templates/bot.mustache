@@ -181,14 +181,22 @@
     
     <div class="notifyjs-corner" style="bottom: 0px; right: 0px;"></div>
     <div class="notifyjs-corner" style="bottom: 0px; left: 0px;"></div>
-    <script>
-        const config = JSON.parse(window.localStorage.config);
-        var first_name = config.first_name;
-        var last_name = config.last_name;
-        var nickname = config.nickname;
-        console.log ("Debug:" + first_name);
-        document.getElementById("logged").innerHTML = "Conectado: " + first_name + " " + last_name + "<br> Apelido: " + nickname ;
-    </script>
+<script>
+function logout(){
+    delete window.localStorage['config'];
+    window.location.href = '/';
+}
+
+const config = JSON.parse(window.localStorage.config),
+    first_name = config.first_name,
+    last_name = config.last_name,
+    nickname = config.nickname,
+    mensagem = "Conectado: " + first_name + " " + last_name + ", " +
+        "Apelido: " + nickname +
+        " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#' onclick='logout()'>Logout</a>";
+
+document.getElementById("logged").innerHTML = mensagem;
+</script>
 </body>
 
 </html>
