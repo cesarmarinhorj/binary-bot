@@ -245,3 +245,7 @@ label {
 .spaceBottom {
     margin-bottom: 26px
 }
+
+.noclose .ui-dialog-titlebar-close {
+    display: none;
+}

@@ -170,6 +170,8 @@
                 <tr><th>Login</th><td><span id="profileUserLogin"></span></td></tr>
             </tbody>
         </table>
+        <div class="spaceBottom"></div>
+        <button onclick="dialogProfileClose()">Fechar</button>
     </div>
 
     <div id="blocklyArea">
@@ -216,7 +218,9 @@ function logout(){
 
 function profile(){
     setProfileData();
-    $("#dialogProfile").dialog();
+    $("#dialogProfile").dialog({
+        dialogClass: "noclose"
+    });
 }
 
 function getStorageData(){
@@ -236,6 +240,10 @@ function setProfileData(){
     document.getElementById("profileNickname").innerHTML = config.nickname;
     document.getElementById("profileUserId").innerHTML = config.user_id;
     document.getElementById("profileUserLogin").innerHTML = config.user_login;
+}
+
+function dialogProfileClose(){
+    $("#dialogProfile").dialog('close');
 }
 
 $("#dialogProfile").hide();
