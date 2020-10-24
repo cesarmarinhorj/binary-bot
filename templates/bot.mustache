@@ -161,11 +161,31 @@
             </ul>
         </li>
     </ul>
+    <div id="dialogProfile" title="User Profile">
+        <table>
+            <tbody>
+                <tr><th>Nome</th><td><span id="profileName"></span></td></tr>
+                <tr><th>Apelido</th><td><span id="profileNickname"></span></td></tr>
+                <tr><th>ID</th><td><span id="profileUserId"></span></td></tr>
+                <tr><th>Login</th><td><span id="profileUserLogin"></span></td></tr>
+            </tbody>
+        </table>
+    </div>
+
     <div id="blocklyArea">
         <div id="loggedContainer">
-            <div id="logged" name="logged"></div>
+            <div id="logged" name="logged">
+                <strong>Conectado:</strong>
+                <div id="loggedName" class="spaceBottom"></div>
+                <strong>Apelido:</strong>
+                <div id="loggedNickname" class="spaceBottom"></div>
+                <div class="spaceBottom">
+                    <button id="btnProfile" onclick="profile()">Profile</button>
+                </div>
+                <button id="btnLogout" onclick="logout()">Logout</button>
+            </div>
             <div id="loggedImg">
-                <img src="/image/tradingview.png" width="100%" />
+                <img id="imgLoggedBackgound" src="/image/tradingview.png" width="100%" />
             </div>
         </div>
     </div>
@@ -185,21 +205,41 @@
     
     <div class="notifyjs-corner" style="bottom: 0px; right: 0px;"></div>
     <div class="notifyjs-corner" style="bottom: 0px; left: 0px;"></div>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
 function logout(){
     delete window.localStorage['config'];
     window.location.href = '/';
 }
 
-const config = JSON.parse(window.localStorage.config),
-    first_name = config.first_name,
-    last_name = config.last_name,
-    nickname = config.nickname,
-    mensagem = "<strong>Conectado:</strong><br>" + first_name + " " + last_name + "<br><br>" +
-        "<strong>Apelido:</strong><br>" + nickname + "<br>" +
-        "<br><br><br><a href='#' onclick='logout()'>Logout</a>";
+function profile(){
+    setProfileData();
+    $("#dialogProfile").dialog();
+}
 
-document.getElementById("logged").innerHTML = mensagem;
+function getStorageData(){
+    const config = JSON.parse(window.localStorage.config);
+    return config;
+}
+
+function setLoggedData(){
+    const config = getStorageData();
+    document.getElementById("loggedName").innerHTML = config.first_name + " " + config.last_name;
+    document.getElementById("loggedNickname").innerHTML = config.nickname;
+}
+
+function setProfileData(){
+    const config = getStorageData();
+    document.getElementById("profileName").innerHTML = config.first_name + " " + config.last_name;
+    document.getElementById("profileNickname").innerHTML = config.nickname;
+    document.getElementById("profileUserId").innerHTML = config.user_id;
+    document.getElementById("profileUserLogin").innerHTML = config.user_login;
+}
+
+$("#dialogProfile").hide();
+setLoggedData();
 </script>
 </body>
 
