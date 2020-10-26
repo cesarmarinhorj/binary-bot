@@ -44,7 +44,7 @@ class LoadContent extends PureComponent {
                 Blockly.mainWorkspace.clear();
                 Blockly.Xml.domToWorkspace(dom.getElementsByTagName('xml')[0], Blockly.mainWorkspace);
                 Blockly.Events.setGroup(false);
-                this.cleanUp();
+                // this.cleanUp();
             });
         }
         if (this.state.loadType === 'one60') {
@@ -53,7 +53,7 @@ class LoadContent extends PureComponent {
                 Blockly.mainWorkspace.clear();
                 Blockly.Xml.domToWorkspace(dom.getElementsByTagName('xml')[0], Blockly.mainWorkspace);
                 Blockly.Events.setGroup(false);
-                this.cleanUp();
+                // this.cleanUp();
             });
         }
 
@@ -63,7 +63,7 @@ class LoadContent extends PureComponent {
                 Blockly.mainWorkspace.clear();
                 Blockly.Xml.domToWorkspace(dom.getElementsByTagName('xml')[0], Blockly.mainWorkspace);
                 Blockly.Events.setGroup(false);
-                this.cleanUp();
+                // this.cleanUp();
             });
         }
 
@@ -73,7 +73,7 @@ class LoadContent extends PureComponent {
                 Blockly.mainWorkspace.clear();
                 Blockly.Xml.domToWorkspace(dom.getElementsByTagName('xml')[0], Blockly.mainWorkspace);
                 Blockly.Events.setGroup(false);
-                this.cleanUp();
+                // this.cleanUp();
             });
         } else {
             importFile('xml/90auto.xml').then(dom => {
@@ -81,7 +81,7 @@ class LoadContent extends PureComponent {
                 Blockly.mainWorkspace.clear();
                 Blockly.Xml.domToWorkspace(dom.getElementsByTagName('xml')[0], Blockly.mainWorkspace);
                 Blockly.Events.setGroup(false);
-                this.cleanUp();
+                // this.cleanUp();
             });
 
             this.props.closeDialog();
