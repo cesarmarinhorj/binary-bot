@@ -41,7 +41,7 @@ function _validate() {
 
             // after login redirect to bot page
             if (confirm('Pode redirecionar, fio?')) {
-                window.location.replace('bot.html');
+                window.location.href = '/bot.html';
             }
         })
         .catch(error => {
