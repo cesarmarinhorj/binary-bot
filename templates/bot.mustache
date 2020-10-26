@@ -186,8 +186,8 @@
                 </div>
                 <button id="btnLogout" onclick="logout()">Logout</button>
             </div>
-            <div id="loggedImg">
-                <img id="imgLoggedBackgound" src="/image/tradingview.png" width="100%" />
+            <div id="loggedImg" class="show-on-load">
+                <img id="imgLoggedBackground" src="/image/tradingview.png" width="100%" />
             </div>
         </div>
     </div>
@@ -246,6 +246,7 @@ function dialogProfileClose(){
     $("#dialogProfile").dialog('close');
 }
 
+$("#loggedImg").hide();
 $("#dialogProfile").hide();
 setLoggedData();
 </script>
