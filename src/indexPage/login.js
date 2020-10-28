@@ -40,9 +40,8 @@ function _validate() {
             setStorage('config.user_id', data.user_id);
 
             // after login redirect to bot page
-            if (confirm('Pode redirecionar, fio?')) {
-                window.location.href = '/bot.html';
-            }
+            window.location.href = '/bot.html?once';
+            console.log('login', 'window.location.href', '/bot.html?once');
         })
         .catch(error => {
             console.error(error);

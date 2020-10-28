@@ -48,7 +48,8 @@ export const oauthLogin = (done = () => 0) => {
             if (accounts.length) {
                 setStorage(AppConstants.STORAGE_ACTIVE_TOKEN, accounts[0].token);
             }
-            document.location = 'bot.html';
+            document.location.href = '/bot.html?once';
+            console.log('appId', 'document.location.href', '/bot.html?once');
         });
     } else {
         done();
@@ -97,8 +98,7 @@ export const getWebSocketURL = () => `wss://${getServerAddressFallback()}/websoc
 
 export const generateWebSocketURL = serverUrl => `wss://${serverUrl}/websockets/v3`;
 
-export const getOAuthURL = () =>
-    `https://${generateOAuthDomain()}/oauth2/authorize?app_id=23785&l=PT`;
+export const getOAuthURL = () => `https://${generateOAuthDomain()}/oauth2/authorize?app_id=23785&l=PT`;
 
 const options = {
     apiUrl  : getWebSocketURL(),
