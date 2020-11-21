@@ -5,6 +5,7 @@ import * as style from '../style';
 import { translate } from '../../../common/i18n';
 import googleDrive from '../../../common/integrations/GoogleDrive';
 import { showSpinnerInButton, removeSpinnerInButton } from '../../../common/utils/tools';
+import { retornaValores, parseXMLTemplate } from '../../common/tools';
 
 import {
     isMainBlock,
@@ -76,13 +77,15 @@ class LoadContent extends PureComponent {
                 // this.cleanUp();
             });
         } else {
-            importFile('xml/90auto.xml').then(dom => {
-                Blockly.Events.setGroup('reset');
-                Blockly.mainWorkspace.clear();
-                Blockly.Xml.domToWorkspace(dom.getElementsByTagName('xml')[0], Blockly.mainWorkspace);
-                Blockly.Events.setGroup(false);
-                // this.cleanUp();
-            });
+            const valores = retornaValores();
+            console.log(valores);
+            const xml_text = parseXMLTemplate('90auto', valores);
+            Blockly.Events.setGroup('reset');
+            Blockly.mainWorkspace.clear();
+            // var xml_text = "<xml xmlns=\"http://www.w4.org/1999/xhtml\" collection=\"true\">  <block type=\"tradeOptions\" id=\"x=V33~4Lb|(sLv`J[:Eb\"> <field name=\"DURATIONTYPE_LIST\">t</field> <field name=\"CURRENCY_LIST\">USD</field>  <field name=\"BARRIEROFFSETTYPE_LIST\">+</field>  <field name=\"SECONDBARRIEROFFSETTYPE_LIST\">-</field> <value name=\"DURATION\"> <shadow type=\"math_number\" id=\"C8^eV9KSC*eI/Hl^*{NZ\">  <field name=\"NUM\">1</field> </shadow> </value> <value name=\"AMOUNT\"><shadow type=\"math_number\" id=\"ml)25~7^q}3I9}vjf:%K\">  <field name=\"NUM\">1</field>  </shadow>  </value>    </block> </xml>";
+            const xml = Blockly.Xml.textToDom(xml_text);
+            Blockly.Xml.domToWorkspace(xml, Blockly.mainWorkspace);
+            Blockly.Events.setGroup(false);
 
             this.props.closeDialog();
             /*
