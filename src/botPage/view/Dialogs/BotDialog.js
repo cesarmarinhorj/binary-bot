@@ -34,64 +34,70 @@ class LoadContent extends PureComponent {
         this.state = { loadType: 'local' };
     }
 
+    loadTemplateXML(key) {
+        const valores = retornaValores();
+        console.log(valores);
+        const xml_text = parseXMLTemplate(key, valores);
+        Blockly.Events.setGroup('reset');
+        Blockly.mainWorkspace.clear();
+        const xml = Blockly.Xml.textToDom(xml_text);
+        Blockly.Xml.domToWorkspace(xml, Blockly.mainWorkspace);
+        Blockly.Events.setGroup(false);
+    }
+
     onChange(event) {
         this.setState({ loadType: event.target.value });
     }
 
     submit() {
         if (this.state.loadType === 'one50') {
-            importFile('xml/One50.xml').then(dom => {
-                Blockly.Events.setGroup('reset');
-                Blockly.mainWorkspace.clear();
-                Blockly.Xml.domToWorkspace(dom.getElementsByTagName('xml')[0], Blockly.mainWorkspace);
-                Blockly.Events.setGroup(false);
-                // this.cleanUp();
-            });
+            this.loadTemplateXML('one50');
+            this.props.closeDialog();
+            // importFile('xml/One50.xml').then(dom => {
+            //     Blockly.Events.setGroup('reset');
+            //     Blockly.mainWorkspace.clear();
+            //     Blockly.Xml.domToWorkspace(dom.getElementsByTagName('xml')[0], Blockly.mainWorkspace);
+            //     Blockly.Events.setGroup(false);
+            //     // this.cleanUp();
+            // });
         }
         if (this.state.loadType === 'one60') {
-            importFile('xml/One60.xml').then(dom => {
-                Blockly.Events.setGroup('reset');
-                Blockly.mainWorkspace.clear();
-                Blockly.Xml.domToWorkspace(dom.getElementsByTagName('xml')[0], Blockly.mainWorkspace);
-                Blockly.Events.setGroup(false);
-                // this.cleanUp();
-            });
+            this.loadTemplateXML('one60');
+            this.props.closeDialog();
+            // importFile('xml/One60.xml').then(dom => {
+            //     Blockly.Events.setGroup('reset');
+            //     Blockly.mainWorkspace.clear();
+            //     Blockly.Xml.domToWorkspace(dom.getElementsByTagName('xml')[0], Blockly.mainWorkspace);
+            //     Blockly.Events.setGroup(false);
+            //     // this.cleanUp();
+            // });
         }
 
         if (this.state.loadType === 'one70') {
-            importFile('xml/One70.xml').then(dom => {
-                Blockly.Events.setGroup('reset');
-                Blockly.mainWorkspace.clear();
-                Blockly.Xml.domToWorkspace(dom.getElementsByTagName('xml')[0], Blockly.mainWorkspace);
-                Blockly.Events.setGroup(false);
-                // this.cleanUp();
-            });
+            this.loadTemplateXML('one70');
+            this.props.closeDialog();
+            // importFile('xml/One70.xml').then(dom => {
+            //     Blockly.Events.setGroup('reset');
+            //     Blockly.mainWorkspace.clear();
+            //     Blockly.Xml.domToWorkspace(dom.getElementsByTagName('xml')[0], Blockly.mainWorkspace);
+            //     Blockly.Events.setGroup(false);
+            //     // this.cleanUp();
+            // });
         }
 
         if (this.state.loadType === 'one80') {
-            importFile('xml/One80.xml').then(dom => {
-                Blockly.Events.setGroup('reset');
-                Blockly.mainWorkspace.clear();
-                Blockly.Xml.domToWorkspace(dom.getElementsByTagName('xml')[0], Blockly.mainWorkspace);
-                Blockly.Events.setGroup(false);
-                // this.cleanUp();
-            });
+            this.loadTemplateXML('one80');
+            this.props.closeDialog();
+            // importFile('xml/One80.xml').then(dom => {
+            //     Blockly.Events.setGroup('reset');
+            //     Blockly.mainWorkspace.clear();
+            //     Blockly.Xml.domToWorkspace(dom.getElementsByTagName('xml')[0], Blockly.mainWorkspace);
+            //     Blockly.Events.setGroup(false);
+            //     // this.cleanUp();
+            // });
         } else {
-            const valores = retornaValores();
-            console.log(valores);
-            const xml_text = parseXMLTemplate('90auto', valores);
-            Blockly.Events.setGroup('reset');
-            Blockly.mainWorkspace.clear();
-            // var xml_text = "<xml xmlns=\"http://www.w4.org/1999/xhtml\" collection=\"true\">  <block type=\"tradeOptions\" id=\"x=V33~4Lb|(sLv`J[:Eb\"> <field name=\"DURATIONTYPE_LIST\">t</field> <field name=\"CURRENCY_LIST\">USD</field>  <field name=\"BARRIEROFFSETTYPE_LIST\">+</field>  <field name=\"SECONDBARRIEROFFSETTYPE_LIST\">-</field> <value name=\"DURATION\"> <shadow type=\"math_number\" id=\"C8^eV9KSC*eI/Hl^*{NZ\">  <field name=\"NUM\">1</field> </shadow> </value> <value name=\"AMOUNT\"><shadow type=\"math_number\" id=\"ml)25~7^q}3I9}vjf:%K\">  <field name=\"NUM\">1</field>  </shadow>  </value>    </block> </xml>";
-            const xml = Blockly.Xml.textToDom(xml_text);
-            Blockly.Xml.domToWorkspace(xml, Blockly.mainWorkspace);
-            Blockly.Events.setGroup(false);
-
+            this.loadTemplateXML('90auto');
             this.props.closeDialog();
-            /*
-            $('#files').click();
-            this.props.closeDialog();
-            */
         }
     }
 
