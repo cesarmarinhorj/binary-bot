@@ -9,6 +9,7 @@ import LoadDialog from './Dialogs/LoadDialog';
 import BotDialog from './Dialogs/BotDialog';
 import SaveDialog from './Dialogs/SaveDialog';
 import TradingView from './Dialogs/TradingView';
+import Video1 from './Dialogs/Video1';
 import logHandler from './logger';
 import LogTable from './LogTable';
 import NetworkMonitor from './NetworkMonitor';
@@ -93,6 +94,8 @@ const addBalanceForToken = token => {
 };
 
 const tradingView = new TradingView();
+
+const video1 = new Video1();
 
 const showRealityCheck = () => {
     $('.blocker').show();
@@ -437,6 +440,10 @@ export default class View {
             }
 
             chart.open();
+        });
+
+        $('#btnVideo1').click(() => {
+            video1.open();
         });
 
         $('#tradingViewButton').click(() => {

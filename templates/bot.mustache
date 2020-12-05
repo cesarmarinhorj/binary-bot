@@ -19,6 +19,8 @@
     <span id="integrations-dialog"></span>
     <span id="chart-dialog"></span>
     <span id="trading-view-dialog"></span>
+    <span id="video1-dialog"></span>
+
     <span id="logPanel" class="draggable-dialog" data-i18n-title="Log">
       <div id="logTable" class="logTable-scroll"></div>
     </span>
@@ -184,11 +186,19 @@
                 <div class="spaceBottom">
                     <button id="btnProfile" onclick="profile()">Profile</button>
                 </div>
-                <button id="btnLogout" onclick="logout()">Logout</button>
+                <div class="spaceBottom">
+                    <button id="btnLogout" onclick="logout()">Logout</button>
+                </div>
+                <strong>Tutoriais:</strong>
+                <div class="spaceBottom">
+                    <button id="btnVideo1" >Video 1</button>
+                </div>
+                
             </div>
             <div id="loggedImg" class="show-on-load">
                 <img id="imgLoggedBackground" src="/image/tradingview.png" width="100%" />
             </div>
+            
         </div>
     </div>
     <div id="blocklyDiv" style="position: absolute;"></div>
