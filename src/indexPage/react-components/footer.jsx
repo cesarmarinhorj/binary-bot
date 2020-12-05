@@ -40,8 +40,8 @@ const Footer = () => (
                 <div className='gr-row'>
                     <div className='gr-12'>
                         <fieldset className='fld-risk-warning'>
-                            <legend>{translate(['Risk Warning'])}</legend>
-                            <p>{translate(['The products offered via this website include binary options, contracts for difference ("CFDs") and other complex derivatives. Trading binary options may not be suitable for everyone. Trading CFDs carries a high level of risk since leverage can work both to your advantage and disadvantage. As a result, the products offered on this website may not be suitable for all investors because of the risk of losing all of your invested capital. You should never invest money that you cannot afford to lose, and never trade with borrowed money. Before trading in the complex products offered, please be sure to understand the risks involved and learn about [_1]Responsible Trading[_2].', `<a href="${createUrl({ path: 'responsible-trading', addLanguage: true, addHtmlExtension: true, isNonBotPage: true })}">`, '</a>'])}</p>
+                            <legend>AVISO DE RISCO</legend>
+                            <p>Os produtos disponibilizados através deste site incluem opções binárias, contratos por diferenças ("CFDs") e outros derivados complexos. A negociação de opções binárias pode não ser adequada para todos. A negociação de CFDs implica um elevado grau de risco, uma vez que a alavancagem pode trabalhar tanto para a sua vantagem como para a sua desvantagem. Como resultado, os produtos disponibilizados neste site podem não ser adequados para todo o tipo de investidor, devido ao risco de se perder todo o capital investido. Nunca se deve investir dinheiro que precisa e nunca se deve negociar com dinheiro emprestado. Antes de negociar os complexos produtos disponibilizados, certifique-se de que compreenda os riscos envolvidos e aprenda mais sobre a negociação responsável.</p>
                         </fieldset>
                     </div>
                 </div>
