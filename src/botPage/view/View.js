@@ -249,7 +249,7 @@ export default class View {
                     this.blockly.initPromise.then(() => {
                         document
                             .getElementById('contact-us')
-                            .setAttribute('href', `https://www.binary.com/${getLanguage()}/contact.html`);
+                            .setAttribute('href', `https://www.onebotmembers.com/${getLanguage()}/contact.html`);
                         this.setElementActions();
                         initRealityCheck(() => $('#stopButton').triggerHandler('click'));
                         applyToolboxPermissions();
@@ -626,7 +626,7 @@ export default class View {
             .text(translate('Log in'));
 
         $('#statement-reality-check').click(() => {
-            document.location = `https://www.binary.com/${getLanguage()}/user/statementws.html#no-reality-check`;
+            document.location = `https://www.onebotmembers.com/${getLanguage()}/user/statementws.html#no-reality-check`;
         });
         $(document).keydown(e => {
             if (e.which === 189) {

@@ -18,10 +18,17 @@
     </div>
 	</div>
 	<div id="header">
-		<div class="wrapper">
-            <div class="logo-wrapper">
-            <div id="binary-logo"></div>
-            {{> ../templates/partials/dbot-banner }}
+        <div class="logo-wrapper">
+          <a href="https://www.onebotmembers.com" target="blank">
+            <div class="logo-parent">
+              <div style="width: 90px;">
+                <img class="responsive" src="{{> binary_style_img }}/logo/symbol.svg" alt="Binary logo" />
+              </div>
+              <div class="binary-logo-text">
+                <img class="responsive" src="{{> binary_style_img }}/logo/type.svg" alt="Binary logo">
+              </div>
+            </div>
+          </a>
         </div>
     </div>
 	</div>
@@ -42,6 +49,9 @@
 	</div>
     <div id="footer"></div>
     {{> index}}
-    
+
+<div style="display: none">
+	<div id="logo"></div>
+</div>    
 </body>
 </html>
