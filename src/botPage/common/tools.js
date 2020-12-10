@@ -95,5 +95,7 @@ export function parseXMLTemplate(key, dados) {
     let text = xmlData[key];
     text = parseTemplate(text, 'tick', dados.tick);
     text = parseTemplate(text, 'stake', dados.stake);
+    text = parseTemplate(text, 'perda', dados.perda);
+    text = parseTemplate(text, 'lucro', dados.lucro);
     return text;
 }

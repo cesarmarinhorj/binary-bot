@@ -50,53 +50,12 @@ class LoadContent extends PureComponent {
     }
 
     submit() {
-        if (this.state.loadType === 'one50') {
-            this.loadTemplateXML('one50');
-            this.props.closeDialog();
-            // importFile('xml/One50.xml').then(dom => {
-            //     Blockly.Events.setGroup('reset');
-            //     Blockly.mainWorkspace.clear();
-            //     Blockly.Xml.domToWorkspace(dom.getElementsByTagName('xml')[0], Blockly.mainWorkspace);
-            //     Blockly.Events.setGroup(false);
-            //     // this.cleanUp();
-            // });
-        }
-        if (this.state.loadType === 'one60') {
-            this.loadTemplateXML('one60');
-            this.props.closeDialog();
-            // importFile('xml/One60.xml').then(dom => {
-            //     Blockly.Events.setGroup('reset');
-            //     Blockly.mainWorkspace.clear();
-            //     Blockly.Xml.domToWorkspace(dom.getElementsByTagName('xml')[0], Blockly.mainWorkspace);
-            //     Blockly.Events.setGroup(false);
-            //     // this.cleanUp();
-            // });
-        }
+        const templates = ['one50', 'one60', 'one70', 'one80', '90auto'];
+        const xml = this.state.loadType;
+        console.log('key', xml);
 
-        if (this.state.loadType === 'one70') {
-            this.loadTemplateXML('one70');
-            this.props.closeDialog();
-            // importFile('xml/One70.xml').then(dom => {
-            //     Blockly.Events.setGroup('reset');
-            //     Blockly.mainWorkspace.clear();
-            //     Blockly.Xml.domToWorkspace(dom.getElementsByTagName('xml')[0], Blockly.mainWorkspace);
-            //     Blockly.Events.setGroup(false);
-            //     // this.cleanUp();
-            // });
-        }
-
-        if (this.state.loadType === 'one80') {
-            this.loadTemplateXML('one80');
-            this.props.closeDialog();
-            // importFile('xml/One80.xml').then(dom => {
-            //     Blockly.Events.setGroup('reset');
-            //     Blockly.mainWorkspace.clear();
-            //     Blockly.Xml.domToWorkspace(dom.getElementsByTagName('xml')[0], Blockly.mainWorkspace);
-            //     Blockly.Events.setGroup(false);
-            //     // this.cleanUp();
-            // });
-        } else {
-            this.loadTemplateXML('90auto');
+        if (templates.indexOf(xml) >= 0) {
+            this.loadTemplateXML(xml);
             this.props.closeDialog();
         }
     }
@@ -157,7 +116,7 @@ class LoadContent extends PureComponent {
                             type="radio"
                             id="load-auto90"
                             name="load-option"
-                            value="auto90"
+                            value="90auto"
                             onChange={e => this.onChange(e)}
                         />
                         <label htmlFor="load-auto90">Auto 90</label>
