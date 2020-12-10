@@ -35,8 +35,8 @@ class LoadContent extends PureComponent {
     }
 
     loadTemplateXML(key) {
-        const valores = retornaValores();
-        console.log(valores);
+        const valores = retornaValores(key);
+        console.log(key, valores);
         const xml_text = parseXMLTemplate(key, valores);
         Blockly.Events.setGroup('reset');
         Blockly.mainWorkspace.clear();

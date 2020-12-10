@@ -9,11 +9,64 @@ const hasOwnProperty = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, 
 
 export const isVirtual = tokenInfo => hasOwnProperty(tokenInfo, 'loginInfo') && tokenInfo.loginInfo.is_virtual;
 
-export const retornaValores = () => {
-    const valTick = prompt('Qual o Valor do Tick?');
+function getValTick() {
+    let valTick = prompt('Qual o valor de entrada? (Minimo de 0.35)');
+    valTick = parseFloat(valTick.replace(/,/g, '.'));
+    return valTick;
+}
+
+function getValLucro() {
+    let valLucro = prompt('Qual o valor do lucro?');
+    valLucro = parseFloat(valLucro.replace(/,/g, '.'));
+    return valLucro;
+}
+
+function getValPerda() {
+    let valPerda = prompt('Qual o valor da perda?');
+    valPerda = parseFloat(valPerda.replace(/,/g, '.'));
+    return valPerda;
+}
+
+const dadosGruposXML = {
+    grupoA: ['90auto', 'one70', 'one80'],
+    grupoB: ['one50', 'one60'],
+};
+
+function hasKey(obj, key) {
+    let retorno = false;
+
+    if (obj.indexOf(key) >= 0) {
+        retorno = true;
+    }
+
+    return retorno;
+}
+
+export const retornaValores = key => {
+    console.log('Key', key);
+    const minimoTick = 0.35;
+    let valTick = 0;
+    let valPerda = null;
+    let valLucro = null;
+
+    valTick = getValTick();
+
+    // tick tem valor mínimo
+    while (valTick < minimoTick) {
+        valTick = getValTick();
+    }
+
+    // recupera os valores se for do grupo B
+    if (hasKey(dadosGruposXML.grupoB, key)) {
+        valPerda = getValPerda();
+        valLucro = getValLucro();
+    }
+
     const retorno = {
         tick : valTick,
         stake: 35,
+        perda: valPerda,
+        lucro: valLucro,
     };
     return retorno;
 };
