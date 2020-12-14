@@ -10,19 +10,19 @@ const hasOwnProperty = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, 
 export const isVirtual = tokenInfo => hasOwnProperty(tokenInfo, 'loginInfo') && tokenInfo.loginInfo.is_virtual;
 
 function getValEntrada() {
-    let valEntrada = prompt('Qual o valor de entrada? (Minimo de 0.35)');
+    let valEntrada = prompt('Qual o valor de entrada? (Minimo de 0.35)') || '0';
     valEntrada = parseFloat(valEntrada.replace(/,/g, '.'));
     return valEntrada;
 }
 
 function getValLucro() {
-    let valLucro = prompt('Qual o valor do lucro?');
+    let valLucro = prompt('Qual o valor do lucro?') || '0';
     valLucro = parseFloat(valLucro.replace(/,/g, '.'));
     return valLucro;
 }
 
 function getValPerda() {
-    let valPerda = prompt('Qual o valor da perda?');
+    let valPerda = prompt('Qual o valor da perda?') || '0';
     valPerda = parseFloat(valPerda.replace(/,/g, '.'));
     return valPerda;
 }
