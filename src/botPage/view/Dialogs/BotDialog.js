@@ -76,7 +76,6 @@ class LoadContent extends PureComponent {
                             id="load-local"
                             name="load-option"
                             value="one50"
-                            defaultChecked={true}
                             onChange={e => this.onChange(e)}
                         />
                         <label htmlFor="load-local">One 50</label>
