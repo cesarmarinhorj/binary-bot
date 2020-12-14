@@ -38,7 +38,7 @@
                 <field name="VAR" id="QS=ouQJBf5H]x~To_8ze" variabletype="">Preço fixo inicial</field>
                 <value name="VALUE">
                   <block type="math_number" id="XbPpD{sH#{v(H{{0)O3m">
-                    <field name="NUM">%entrada%</field>
+                    <field name="NUM">5</field>
                   </block>
                 </value>
                 <next>
