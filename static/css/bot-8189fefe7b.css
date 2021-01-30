@@ -1192,4 +1192,30 @@ label {
 .notifyjs-corner {
   z-index: 10001 !important; }
 
-/*# sourceMappingURL=bot-855aec2044.css.map */
+#loggedContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  justify-content: space-between;
+  background-color: #eee;
+  height: 100%; }
+
+#logged {
+  border-right: 4px solid #E98024;
+  border-top: 4px solid #fff;
+  flex-wrap: nowrap;
+  float: left;
+  min-width: 160px; }
+
+#loggedImg {
+  margin-left: 6px;
+  float: right; }
+
+.spaceBottom {
+  margin-bottom: 26px; }
+
+.noclose .ui-dialog-titlebar-close {
+  display: none; }
+
+/*# sourceMappingURL=bot-8189fefe7b.css.map */

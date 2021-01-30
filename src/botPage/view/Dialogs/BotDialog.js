@@ -28,6 +28,7 @@ import {
     getPreviousStrat,
 } from '../blockly/utils';
 
+import { loadWorkspace } from '../blockly';
 class LoadContent extends PureComponent {
     constructor() {
         super();
@@ -38,11 +39,12 @@ class LoadContent extends PureComponent {
         const valores = retornaValores(key);
         console.log(key, valores);
         const xml_text = parseXMLTemplate(key, valores);
-        Blockly.Events.setGroup('reset');
-        Blockly.mainWorkspace.clear();
+        //Blockly.Events.setGroup('reset');
+        //Blockly.mainWorkspace.clear();
         const xml = Blockly.Xml.textToDom(xml_text);
-        Blockly.Xml.domToWorkspace(xml, Blockly.mainWorkspace);
-        Blockly.Events.setGroup(false);
+        loadWorkspace (xml);
+        //Blockly.Xml.domToWorkspace(xml, Blockly.mainWorkspace);
+        //Blockly.Events.setGroup(false);
     }
 
     onChange(event) {
