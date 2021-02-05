@@ -52,7 +52,7 @@ class LoadContent extends PureComponent {
     }
 
     submit() {
-        const templates = ['one50', 'one60', 'one70', 'one80', '90auto'];
+        const templates = ['one50', 'one60', 'one70', 'one80', 'one90', '90auto'];
         const xml = this.state.loadType;
         console.log('key', xml);
 
@@ -111,6 +111,16 @@ class LoadContent extends PureComponent {
                             onChange={e => this.onChange(e)}
                         />
                         <label htmlFor="load-one80">One 80</label>
+                    </span>
+                    <span className="integration-option">
+                        <input
+                            type="radio"
+                            id="load-one90"
+                            name="load-option"
+                            value="one90"
+                            onChange={e => this.onChange(e)}
+                        />
+                        <label htmlFor="load-one90">One 90</label>
                     </span>
                     <span className="integration-option">
                         <input
