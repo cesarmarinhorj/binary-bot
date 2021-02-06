@@ -27,7 +27,7 @@ function _validate() {
             method: 'POST',
             body  : formData,
         },
-        url = 'https://perfil.mbmaciel.com/authentication.php';
+        url = 'http://perfil.onebotmembers.com/authentication.php';
 
     return fetch(url, fetchOption)
         .then(response => {

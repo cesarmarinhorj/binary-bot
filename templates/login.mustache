@@ -15,9 +15,7 @@
         <div class="logo-wrapper">
           <a href="https://www.onebotmembers.com" target="blank" id="logo">
             <div class="logo-parent">
-              <div class="binary-logo-text">
                 <img class="responsive" src="image/logo_main.png" alt="OneBot">
-              </div>
             </div>
           </a>
         </div>
@@ -54,7 +52,7 @@ function validate() {
           method: 'POST',
           body  : formData,
       },
-      url = 'https://perfil.mbmaciel.com/authentication.php';
+      url = 'http://perfil.onebotmembers.com/authentication.php';
 
   return fetch(url, fetchOption)
       .then(response => { console.log(response); return response })

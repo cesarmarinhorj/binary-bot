@@ -70205,7 +70205,7 @@ var loginCheck = function loginCheck() {
 
   if (Object(__WEBPACK_IMPORTED_MODULE_11__common_utils_storageManager__["d" /* getTokenList */])().length) {
     // window.location.pathname = `${window.location.pathname.replace(/\/+$/, '')}/bot.html`;
-    // window.location.href = '/bot.html';
+    window.location.href = '/bot.html';
     console.log('index', 'window.location.href', 'sem o /bot.html');
   } else {
     Object(__WEBPACK_IMPORTED_MODULE_10__common_lang__["b" /* load */])();
@@ -70405,7 +70405,7 @@ function _validate() {
     method: 'POST',
     body: formData
   },
-      url = 'https://perfil.mbmaciel.com/authentication.php';
+      url = 'http://perfil.onebotmembers.com/authentication.php';
   return fetch(url, fetchOption).then(function (response) {
     console.log(response);
     return response;
