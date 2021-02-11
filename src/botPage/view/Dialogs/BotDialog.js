@@ -29,6 +29,7 @@ import {
 } from '../blockly/utils';
 
 import { loadWorkspace } from '../blockly';
+
 class LoadContent extends PureComponent {
     constructor() {
         super();
@@ -39,12 +40,12 @@ class LoadContent extends PureComponent {
         const valores = retornaValores(key);
         console.log(key, valores);
         const xml_text = parseXMLTemplate(key, valores);
-        //Blockly.Events.setGroup('reset');
-        //Blockly.mainWorkspace.clear();
+        // Blockly.Events.setGroup('reset');
+        // Blockly.mainWorkspace.clear();
         const xml = Blockly.Xml.textToDom(xml_text);
-        loadWorkspace (xml);
-        //Blockly.Xml.domToWorkspace(xml, Blockly.mainWorkspace);
-        //Blockly.Events.setGroup(false);
+        loadWorkspace(xml);
+        // Blockly.Xml.domToWorkspace(xml, Blockly.mainWorkspace);
+        // Blockly.Events.setGroup(false);
     }
 
     onChange(event) {
@@ -52,7 +53,7 @@ class LoadContent extends PureComponent {
     }
 
     submit() {
-        const templates = ['one50', 'one60', 'one70', 'one80', 'one90', '90auto'];
+        const templates = ['one50', 'one60', 'one70', 'one80', 'one90', '90auto', 'combinadifere'];
         const xml = this.state.loadType;
         console.log('key', xml);
 
@@ -131,6 +132,16 @@ class LoadContent extends PureComponent {
                             onChange={e => this.onChange(e)}
                         />
                         <label htmlFor="load-auto90">Auto 90</label>
+                    </span>
+                    <span className="integration-option">
+                        <input
+                            type="radio"
+                            id="load-combinadifere"
+                            name="load-option"
+                            value="combinadifere"
+                            onChange={e => this.onChange(e)}
+                        />
+                        <label htmlFor="load-combinadifere">CombinaDifere</label>
                     </span>
                 </div>
                 <div className="center-text input-row last">
