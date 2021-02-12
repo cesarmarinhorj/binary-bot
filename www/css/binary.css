@@ -101,7 +101,7 @@ header {
     border-top: 2px solid #2a3052;
     /* border-bottom: 4px solid #e98024; */
     border-bottom: 4px solid #000;
-    background: #2a3052;
+    background: #000;
 }
 #header a,
 .header a {
