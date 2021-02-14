@@ -186,15 +186,12 @@ const getActiveToken = (tokenList, activeToken) => {
 const updateTokenList = () => {
     const tokenList = getTokenList();
     const token = JSON.parse(window.localStorage.config);
+    console.log(tokenList, token);
 
     const loginButton = $('#login, #toolbox-login');
     const accountList = $('#account-list, #toolbox-account-list');
     if (tokenList.length === 0) {
-        if (token.auth_token === undefined) {
-            loginButton.show();
-        } else {
-            loginButton.hide();
-        }
+        loginButton.hide();
         accountList.hide();
 
         // If logged out, determine EU based on IP.
