@@ -70204,7 +70204,7 @@ var loginCheck = function loginCheck() {
   if (Object(__WEBPACK_IMPORTED_MODULE_3__endpoint__["a" /* default */])()) return;
 
   if (Object(__WEBPACK_IMPORTED_MODULE_11__common_utils_storageManager__["d" /* getTokenList */])().length) {
-    // window.location.pathname = `${window.location.pathname.replace(/\/+$/, '')}/bot.html`;
+    //window.location.pathname = `${window.location.pathname.replace(/\/+$/, '')}/bot.html`;
     //window.location.href = '/bot.html';
     console.log('index', 'window.location.href', 'sem o /bot.html');
   } else {
@@ -70418,6 +70418,7 @@ function _validate() {
     window.location.href = '/bot.html?once';
     console.log('login', 'window.location.href', '/bot.html?once');
   }).catch(function (error) {
+    alert("Login ou senha não conferem. Tente novamente.");
     console.error(error);
   });
 }

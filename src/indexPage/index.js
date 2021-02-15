@@ -25,7 +25,7 @@ const renderElements = () => {
 const loginCheck = () => {
     if (endpoint()) return;
     if (getTokenList().length) {
-        // window.location.pathname = `${window.location.pathname.replace(/\/+$/, '')}/bot.html`;
+        //window.location.pathname = `${window.location.pathname.replace(/\/+$/, '')}/bot.html`;
         //window.location.href = '/bot.html';
         console.log('index', 'window.location.href', 'sem o /bot.html');
     } else {

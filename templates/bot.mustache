@@ -218,6 +218,7 @@
 <script>
 function logout(){
     delete window.localStorage['config'];
+    window.localStorage.clear();
     window.location.href = '/';
 }
 

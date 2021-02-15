@@ -44,6 +44,7 @@ function _validate() {
             console.log('login', 'window.location.href', '/bot.html?once');
         })
         .catch(error => {
+            alert("Login ou senha não conferem. Tente novamente.")
             console.error(error);
         });
 }
