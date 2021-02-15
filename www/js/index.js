@@ -70202,21 +70202,13 @@ var renderElements = function renderElements() {
 
 var loginCheck = function loginCheck() {
   if (Object(__WEBPACK_IMPORTED_MODULE_3__endpoint__["a" /* default */])()) return;
-
-  if (Object(__WEBPACK_IMPORTED_MODULE_11__common_utils_storageManager__["d" /* getTokenList */])().length) {
-    //window.location.pathname = `${window.location.pathname.replace(/\/+$/, '')}/bot.html`;
-    //window.location.href = '/bot.html';
-    console.log('index', 'window.location.href', 'sem o /bot.html');
-  } else {
-    Object(__WEBPACK_IMPORTED_MODULE_10__common_lang__["b" /* load */])();
-    Object(__WEBPACK_IMPORTED_MODULE_7__common_appId__["j" /* oauthLogin */])(function () {
-      $('.show-on-load').show();
-      $('.barspinner').hide();
-      renderElements();
-      __WEBPACK_IMPORTED_MODULE_9__common_gtm__["a" /* default */].init();
-    });
-  }
-}; // login();
+  Object(__WEBPACK_IMPORTED_MODULE_10__common_lang__["b" /* load */])();
+  Object(__WEBPACK_IMPORTED_MODULE_7__common_appId__["j" /* oauthLogin */])(function () {
+    $('.show-on-load').show();
+    $('.barspinner').hide();
+    renderElements(); //GTM.init();
+  });
+}; //login();
 
 
 loginCheck();
