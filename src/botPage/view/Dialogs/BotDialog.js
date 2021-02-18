@@ -53,7 +53,7 @@ class LoadContent extends PureComponent {
     }
 
     submit() {
-        const templates = ['one50', 'one60', 'one70', 'one70-modo-2', 'one80', 'one80-modo-2', 'one90', 'one90-modo-2', '90auto', 'combinadifere'];
+        const templates = ['one40', 'one40-modo-2', 'one50', 'one60', 'one70', 'one70-modo-2', 'one80', 'one80-modo-2', 'one90', 'one90-modo-2', '90auto', 'combinadifere'];
         const xml = this.state.loadType;
         console.log('key', xml);
 
@@ -73,6 +73,26 @@ class LoadContent extends PureComponent {
                 onSubmit={() => this.submit()}
             >
                 <div className="center-text input-row">
+                    <span className="integration-option">
+                        <input
+                            type="radio"
+                            id="load-one40"
+                            name="load-option"
+                            value="one40"
+                            onChange={e => this.onChange(e)}
+                        />
+                        <label htmlFor="load-one40">One 40 (4)</label>
+                    </span>
+                    <span className="integration-option">
+                        <input
+                            type="radio"
+                            id="load-one40-modo-2"
+                            name="load-option"
+                            value="one40-modo-2"
+                            onChange={e => this.onChange(e)}
+                        />
+                        <label htmlFor="load-one40-modo-2">One 40 (5)</label>
+                    </span>
                     <span className="integration-option">
                         <input
                             type="radio"
@@ -101,7 +121,7 @@ class LoadContent extends PureComponent {
                             value="one70"
                             onChange={e => this.onChange(e)}
                         />
-                        <label htmlFor="load-one70">One 70 - modo 1</label>
+                        <label htmlFor="load-one70">One 70 (2)</label>
                     </span>
                     <span className="integration-option">
                         <input
@@ -111,7 +131,7 @@ class LoadContent extends PureComponent {
                             value="one70-modo-2"
                             onChange={e => this.onChange(e)}
                         />
-                        <label htmlFor="load-one70-modo-2">One 70 - modo 2</label>
+                        <label htmlFor="load-one70-modo-2">One 70 (7)</label>
                     </span>
                     <span className="integration-option">
                         <input
@@ -121,7 +141,7 @@ class LoadContent extends PureComponent {
                             value="one80"
                             onChange={e => this.onChange(e)}
                         />
-                        <label htmlFor="load-one80">One 80 - modo 1</label>
+                        <label htmlFor="load-one80">One 80 (1)</label>
                     </span>
                     <span className="integration-option">
                         <input
@@ -131,7 +151,7 @@ class LoadContent extends PureComponent {
                             value="one80-modo-2"
                             onChange={e => this.onChange(e)}
                         />
-                        <label htmlFor="load-one80-modo-2">One 80 - modo 2</label>
+                        <label htmlFor="load-one80-modo-2">One 80 (8)</label>
                     </span>
                     <span className="integration-option">
                         <input
@@ -141,7 +161,7 @@ class LoadContent extends PureComponent {
                             value="one90"
                             onChange={e => this.onChange(e)}
                         />
-                        <label htmlFor="load-one90">One 90 - modo 1</label>
+                        <label htmlFor="load-one90">One 90 (0)</label>
                     </span>
                     <span className="integration-option">
                         <input
@@ -151,7 +171,7 @@ class LoadContent extends PureComponent {
                             value="one90-modo-2"
                             onChange={e => this.onChange(e)}
                         />
-                        <label htmlFor="load-one90-modo-2">One 90 - modo 2</label>
+                        <label htmlFor="load-one90-modo-2">One 90 (9)</label>
                     </span>
                     <span className="integration-option">
                         <input
