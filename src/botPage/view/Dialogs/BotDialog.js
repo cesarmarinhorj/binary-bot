@@ -208,7 +208,7 @@ class LoadContent extends PureComponent {
                             this.submitButton = el;
                         }}
                     >
-                        {translate('Load')}
+                        {translate('Carregar')}
                     </button>
                 </div>
             </form>
@@ -223,7 +223,7 @@ export default class LoadDialog extends Dialog {
         const closeDialog = () => {
             this.close();
         };
-        super('load-dialog', translate('Load blocks'), <LoadContent closeDialog={closeDialog} />, style.dialogLayout);
+        super('load-dialog', 'Carregar Robos', <LoadContent closeDialog={closeDialog} />, style.dialogLayout);
         this.registerCloseOnOtherDialog();
     }
 }
