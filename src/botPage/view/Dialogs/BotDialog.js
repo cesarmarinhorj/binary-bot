@@ -73,6 +73,8 @@ class LoadContent extends PureComponent {
                 onSubmit={() => this.submit()}
             >
                 <div className="center-text input-row">
+                    <h5>Grupo C</h5>
+                    <hr></hr>
                     <span className="integration-option">
                         <input
                             type="radio"
@@ -93,7 +95,6 @@ class LoadContent extends PureComponent {
                         />
                         <label htmlFor="load-one40-modo-2">One 40 (5)</label>
                     </span>
-                    <hr></hr>
                     <span className="integration-option">
                         <input
                             type="radio"
@@ -104,7 +105,6 @@ class LoadContent extends PureComponent {
                         />
                         <label htmlFor="load-local">One 50</label>
                     </span>
-                    <hr></hr>
                     <span className="integration-option">
                         <input
                             type="radio"
@@ -115,6 +115,7 @@ class LoadContent extends PureComponent {
                         />
                         <label htmlFor="load-one60">One 60</label>
                     </span>
+                    <h5>Grupo A</h5>
                     <hr></hr>
                     <span className="integration-option">
                         <input
@@ -136,7 +137,6 @@ class LoadContent extends PureComponent {
                         />
                         <label htmlFor="load-one70-modo-2">One 70 (7)</label>
                     </span>
-                    <hr></hr>
                     <span className="integration-option">
                         <input
                             type="radio"
@@ -157,6 +157,7 @@ class LoadContent extends PureComponent {
                         />
                         <label htmlFor="load-one80-modo-2">One 80 (8)</label>
                     </span>
+                    <h5>Grupo B</h5>
                     <hr></hr>
                     <span className="integration-option">
                         <input
@@ -178,7 +179,6 @@ class LoadContent extends PureComponent {
                         />
                         <label htmlFor="load-one90-modo-2">One 90 (9)</label>
                     </span>
-                    <hr></hr>
                     <span className="integration-option">
                         <input
                             type="radio"
@@ -189,7 +189,6 @@ class LoadContent extends PureComponent {
                         />
                         <label htmlFor="load-auto90">Auto 90</label>
                     </span>
-                    <hr></hr>
                     <span className="integration-option">
                         <input
                             type="radio"
