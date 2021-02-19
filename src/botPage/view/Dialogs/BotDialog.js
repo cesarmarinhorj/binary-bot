@@ -73,48 +73,8 @@ class LoadContent extends PureComponent {
                 onSubmit={() => this.submit()}
             >
                 <div className="center-text input-row">
-                    <h5>Grupo C</h5>
-                    <hr></hr>
-                    <span className="integration-option">
-                        <input
-                            type="radio"
-                            id="load-one40"
-                            name="load-option"
-                            value="one40"
-                            onChange={e => this.onChange(e)}
-                        />
-                        <label htmlFor="load-one40">One 40 (4)</label>
-                    </span>
-                    <span className="integration-option">
-                        <input
-                            type="radio"
-                            id="load-one40-modo-2"
-                            name="load-option"
-                            value="one40-modo-2"
-                            onChange={e => this.onChange(e)}
-                        />
-                        <label htmlFor="load-one40-modo-2">One 40 (5)</label>
-                    </span>
-                    <span className="integration-option">
-                        <input
-                            type="radio"
-                            id="load-local"
-                            name="load-option"
-                            value="one50"
-                            onChange={e => this.onChange(e)}
-                        />
-                        <label htmlFor="load-local">One 50</label>
-                    </span>
-                    <span className="integration-option">
-                        <input
-                            type="radio"
-                            id="load-one60"
-                            name="load-option"
-                            value="one60"
-                            onChange={e => this.onChange(e)}
-                        />
-                        <label htmlFor="load-one60">One 60</label>
-                    </span>
+                    
+
                     <h5>Grupo A</h5>
                     <hr></hr>
                     <span className="integration-option">
@@ -198,6 +158,48 @@ class LoadContent extends PureComponent {
                             onChange={e => this.onChange(e)}
                         />
                         <label htmlFor="load-combinadifere">CombinaDifere</label>
+                    </span>
+                    <h5>Grupo C</h5>
+                    <hr></hr>
+                    <span className="integration-option">
+                        <input
+                            type="radio"
+                            id="load-one40"
+                            name="load-option"
+                            value="one40"
+                            onChange={e => this.onChange(e)}
+                        />
+                        <label htmlFor="load-one40">One 40 (4)</label>
+                    </span>
+                    <span className="integration-option">
+                        <input
+                            type="radio"
+                            id="load-one40-modo-2"
+                            name="load-option"
+                            value="one40-modo-2"
+                            onChange={e => this.onChange(e)}
+                        />
+                        <label htmlFor="load-one40-modo-2">One 40 (5)</label>
+                    </span>
+                    <span className="integration-option">
+                        <input
+                            type="radio"
+                            id="load-local"
+                            name="load-option"
+                            value="one50"
+                            onChange={e => this.onChange(e)}
+                        />
+                        <label htmlFor="load-local">One 50</label>
+                    </span>
+                    <span className="integration-option">
+                        <input
+                            type="radio"
+                            id="load-one60"
+                            name="load-option"
+                            value="one60"
+                            onChange={e => this.onChange(e)}
+                        />
+                        <label htmlFor="load-one60">One 60</label>
                     </span>
                 </div>
                 <div className="center-text input-row last">
